@@ -18,6 +18,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
+    path('buscar/<nome>', buscarPessoa),
     path('hello/', hello),
     path('<nome>', rota),
     path('artigos/<int:year>', artigos),
