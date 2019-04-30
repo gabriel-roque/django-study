@@ -1,7 +1,5 @@
 # Django Study
 
-[TOC]
-
 # Install Ambient
 
 No Linux/Ubuntu não precisamos instalar Python, porque já é nativo em sistemas operacionais baseados em Unix, mas para termos certeza basta executar o comando no terminal:
@@ -54,4 +52,11 @@ Então podemos finalmente criar o projeto django executando o seguinte comando:
 
 ```
 $ django-admin startproject first_django_project
+```
+
+O django funciona com APPS, um projeto e composto de apps 
+e cada apps vai executar uma funcao especifica do nosso projeto. 
+
+```
+$ ./manage.py startapp nome_da_app
 ```
