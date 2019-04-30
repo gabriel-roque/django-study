@@ -60,3 +60,12 @@ e cada apps vai executar uma funcao especifica do nosso projeto.
 ```
 $ ./manage.py startapp nome_da_app
 ```
+
+Toda vez que criar uma APP nova deve registrar INSTALLED_APPS no arquivo **setting.py**
+em os seguintes comandos
+```
+$ ./manage.py makemigrations
+```
+```
+$ ./manage.py migrate
+```
