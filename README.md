@@ -1,4 +1,12 @@
-# Django Study
+<p align="center">
+  <img src="https://static.djangoproject.com/img/logos/django-logo-negative.png" width="150" title="Github Logo">
+</p>
+
+# Life Cycle Request Django
+
+<p align="center">
+  <img src="https://i.stack.imgur.com/rLfSC.jpg" width="200" title="Github Logo">
+</p>
 
 # Install Ambient
 
