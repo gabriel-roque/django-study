@@ -9,6 +9,7 @@ class Pessoa(models.Model):
     idade = models.IntegerField()
     salario = models.DecimalField(max_digits=5, decimal_places=2)
     bio = models.TextField()
+    photo = models.ImageField(upload_to='clients_photos', null=True, blank=True)
 
     def __str__(self):
         return self.pri_nome + ' ' + self.seg_nome
