@@ -18,6 +18,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
+    path('index/cliente/<nome>', indexCliente),
     path('buscar/<nome>', buscarPessoa),
     path('hello/', hello),
     path('nome/<nome>', rota),

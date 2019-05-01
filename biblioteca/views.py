@@ -6,6 +6,12 @@ def hello(request):
     return render(request, 'index.html')
 
 
+def indexCliente(request, nome):
+    registro = lerBanco(nome)
+
+    return render(request, 'pessoa.html', {'nome': registro['nome']})
+
+
 def artigos(request, year):
     return HttpResponse('O ano enviado foi: ' + str(year))
 
@@ -16,9 +22,9 @@ def rota(request, nome):
 
 def lerBanco(nome):
     lista = [
-        {'nome': 'gabriel'},
-        {'nome': 'camila'},
-        {'nome': 'eduarda'}
+        {'nome': 'gabriel', 'idade': 20},
+        {'nome': 'camila', 'idade': 15},
+        {'nome': 'eduarda', 'idade': 17}
     ]
 
     for pessoa in lista:
