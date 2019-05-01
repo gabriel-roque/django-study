@@ -97,3 +97,15 @@ from .models import Pessoa # <-- linha para importar
 admin.site.register(Pessoa) # <-- linha para registrar
 ...
 ```
+
+DEBUG de Arquivos de media (Imagens, ...)
+
+Adicionar no arquivo de **urls.py**
+```python
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = patterns('',
+    # ... the rest of your URLconf goes here ...
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
