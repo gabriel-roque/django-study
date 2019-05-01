@@ -20,7 +20,7 @@ from .views import *
 urlpatterns = [
     path('buscar/<nome>', buscarPessoa),
     path('hello/', hello),
-    path('<nome>', rota),
+    path('nome/<nome>', rota),
     path('artigos/<int:year>', artigos),
     path('admin/', admin.site.urls),
 ]
