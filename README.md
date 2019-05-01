@@ -77,3 +77,23 @@ $ ./manage.py makemigrations
 ```
 $ ./manage.py migrate
 ```
+
+ADMIN Django
+
+```
+$ ./manage.py createsuperuser
+```
+
+Acesse ```localhost:8000/admin/```
+
+Registrar MODEL em Django ADMIN
+
+Abra o arquivo **admin.py** nele devemos registrar a model para ser adicionada no painel ADMIN
+
+```python
+from django.contrib import admin
+from .models import Pessoa # <-- linha para importar
+
+admin.site.register(Pessoa) # <-- linha para registrar
+...
+```
