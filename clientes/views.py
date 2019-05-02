@@ -4,4 +4,5 @@ from .models import Cliente
 
 # Create your views here.
 def listarClientes(request):
-    return False
+    clientes = Cliente.objects.all()
+    return render(request, 'clientes.html', {'clientes': clientes})

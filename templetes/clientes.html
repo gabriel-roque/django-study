@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes | READ</title>
+</head>
+<body>
+
+    <ul>
+        {% for cli in clientes %}
+            <li>{{ cli.pri_nome }} {{ cli.seg_nome }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
