@@ -18,11 +18,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from .views import *
+from clientes import urls as clientes_urls
 
 urlpatterns = [
-    path('index/cliente/<nome>', indexCliente),
+    path('', include(clientes_urls)),
     path('buscar/<nome>', buscarPessoa),
     path('hello/', hello),
     path('nome/<nome>', rota),

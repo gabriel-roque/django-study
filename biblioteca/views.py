@@ -6,12 +6,6 @@ def hello(request):
     return render(request, 'index.html')
 
 
-def indexCliente(request, nome):
-    registro = lerBanco(nome)
-
-    return render(request, 'pessoa.html', {'nome': registro['nome']})
-
-
 def artigos(request, year):
     return HttpResponse('O ano enviado foi: ' + str(year))
 
