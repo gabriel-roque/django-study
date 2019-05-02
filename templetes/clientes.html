@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Clientes | READ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
 
-    <ul>
-        {% for cli in clientes %}
-            <li>{{ cli.pri_nome }} {{ cli.seg_nome }}</li>
-        {% endfor %}
-    </ul>
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cli in clientes %}
+                <tr>
+                  <th scope="row">{{ cli.id }}</th>
+                  <td>{{ cli.pri_nome }}</td>
+                  <td>{{ cli.seg_nome }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
 
 </body>
 </html>
