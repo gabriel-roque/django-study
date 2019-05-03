@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+     <table border="1">
+        <form action="{% url 'novo.cliente' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form }}
+
+
+            <button type="submit">Adicionar</button>
+        </form>
+    </table>
+</div>
+
+
+</body>
+</html>
