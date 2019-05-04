@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container mt-5">
+
+
+    <form action="{% url 'update.cliente' cliente.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="pri_nome">Primeiro Nome</label>
+            <input type="text" class="form-control" id="pri_nome" name="pri_nome" value="{{ form.pri_nome.value }}">
+        </div>
+        <div class="form-group">
+            <label for="seg_nome">Segundo Nome</label>
+            <input type="text" class="form-control" id="seg_nome" name="seg_nome" value="{{ form.seg_nome.value }}">
+        </div>
+        <div class="form-group">
+            <label for="idade">Idade</label>
+            <input type="text" class="form-control" id="idade" name="idade" value="{{ form.idade.value }}">
+        </div>
+        <div class="form-group">
+            <label for="salario">Salario</label>
+            <input type="text" class="form-control" id="salario" name="salario" value="{{ form.salario.value }}">
+        </div>
+        <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea class="form-control" id="bio" rows="3" name="bio">{{ form.bio.value }}</textarea>
+        </div>
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="photo" name="photo" accept="image/*">
+                <label class="custom-file-label" for="photo">Choose file</label>
+            </div>
+        </div>
+
+{#        {{ form }}#}
+
+        <button type="submit" class="btn btn-success">Atualizar</button>
+        <a href="{% url 'listar.cliente' %}">
+            <button type="button" class="btn btn-primary">Voltar</button>
+        </a>
+    </form>
+
+
+</div>
+
+
+</body>
+</html>
