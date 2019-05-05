@@ -32,3 +32,13 @@ def atualizarCliente(request, id):
 
     return render(request, 'update_cliente.html', {'form': form, 'cliente': cliente})
 
+
+def deletarCliente(request, id):
+    cliente = get_object_or_404(Cliente, pk=id)
+    # form = ClienteForm(request.POST, request.FILES, instance=cliente)
+
+    if request.method == 'POST':
+        cliente.delete()
+        return redirect('listar.cliente')
+
+
