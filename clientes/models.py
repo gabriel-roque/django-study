@@ -7,7 +7,7 @@ class Cliente(models.Model):
     pri_nome = models.CharField(max_length=30)
     seg_nome = models.CharField(max_length=30)
     idade = models.IntegerField()
-    salario = models.DecimalField(max_digits=5, decimal_places=2)
+    salario = models.CharField(max_length=30)
     bio = models.TextField()
     photo = models.ImageField(upload_to='clients_photos', null=True, blank=True)
 
