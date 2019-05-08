@@ -28,7 +28,7 @@
                   <td>{{ cli.seg_nome }}</td>
                   <td>
                       <a href="{% url 'update.cliente' cli.id %}"><i class="fas fa-highlighter"></i></a>
-                      <form action="{% url 'delete.cliente' cli.id  %}">
+                      <form action="{% url 'delete.cliente' cli.id  %}" method="POST">
                           {% csrf_token %}
                         <a href="{% url 'delete.cliente' cli.id %}"><i class="fas fa-user-minus"></i></a>
                       </form>
